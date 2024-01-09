@@ -1,0 +1,3 @@
+.outline-primary svg path, .outline-danger svg path{
+    fill: white;
+}

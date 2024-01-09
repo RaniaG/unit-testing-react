@@ -1,0 +1,10 @@
+.delete-icon svg path{
+    fill: red;
+}
+.edit-icon svg path, .outline-primary svg path, .outline-danger svg path{
+    fill: white;
+}
+
+.title-container {
+    flex-grow: 2;
+}
