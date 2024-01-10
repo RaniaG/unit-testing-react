@@ -12,7 +12,7 @@ import { useState } from "react";
 
 interface Props {
   id: number;
-  title: string;
+  title?: string;
   onCancel: () => void;
   onEdit: () => void;
 }
@@ -43,7 +43,11 @@ export const EditableTask = ({ id, title, onCancel, onEdit }: Props) => {
               onBlur={handleBlur}
             ></Form.Control>
             <div className="d-flex flex-row">
-              <Button variant="outline-primary" type="submit">
+              <Button
+                variant="outline-primary"
+                type="submit"
+                data-testid="submit-button"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -53,7 +57,11 @@ export const EditableTask = ({ id, title, onCancel, onEdit }: Props) => {
                   <path d="M21.03 5.72a.75.75 0 0 1 0 1.06l-11.5 11.5a.747.747 0 0 1-1.072-.012l-5.5-5.75a.75.75 0 1 1 1.084-1.036l4.97 5.195L19.97 5.72a.75.75 0 0 1 1.06 0Z"></path>
                 </svg>
               </Button>
-              <Button variant="outline-danger" onClick={() => onCancel()}>
+              <Button
+                variant="outline-danger"
+                onClick={() => onCancel()}
+                data-testid="cancel-button"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"

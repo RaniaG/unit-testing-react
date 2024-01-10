@@ -8,7 +8,7 @@ import { Loading } from "../Loading";
 
 interface Props {
   id: number;
-  title: string;
+  title?: string;
   onChange: () => void;
 }
 
@@ -43,6 +43,7 @@ export const Task = ({ id, title, onChange }: Props) => {
                 variant="primary"
                 className="edit-icon"
                 onClick={() => setEditable(true)}
+                data-testid="edit-button"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +58,7 @@ export const Task = ({ id, title, onChange }: Props) => {
                 variant="primary"
                 className="delete-icon"
                 onClick={() => setShowDeleteConfirmation(true)}
+                data-testid="delete-button"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
